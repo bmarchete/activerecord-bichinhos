@@ -7,13 +7,10 @@ use App\Model\Repository\AnimalRepository;
 use App\Model\Repository\GeneroRepository;
 
 
+
 class Controller {
 
-    // variaveis de funções nao aparecem para a pagina
-    //esta é uma variável de classe
-    public $dados;
-    public $generos;
-    public $animais;
+
 
     public function index() {
 
@@ -43,27 +40,17 @@ class Controller {
         }
 
         //this representa uma variavel de classe
-        $this->dados = $a->busca();
+        $dados = $a->busca();
 
         $g = new GeneroRepository();
 
-        $this->generos = $g->busca();
+        $generos = $g->busca();
+        $x = 2;
+
+        //chama a view
+        include_once __DIR__ . '/../View/index.php';
     }
 
-    public function consulta() {
 
-        $g = new GeneroRepository();
-
-        $this->generos = $g->busca();
-
-        if (isset($_GET['genero'])) {
-            $a = new AnimalRepository();
-
-
-            $this->animais = $a->buscaGenero($_GET['genero']);
-        }else{
-            $this->animais = array();
-        }
-    }
 
 }

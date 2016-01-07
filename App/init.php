@@ -1,6 +1,8 @@
 <?php
 
+
 require_once __DIR__ . '/../vendor/autoload.php';
+
 
 ActiveRecord\Config::initialize(function($cfg)
 {
