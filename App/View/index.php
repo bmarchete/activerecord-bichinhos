@@ -17,7 +17,7 @@
     </head>
     <body>
 
-        <div class="container-fluid">
+        <div class="container">
             <div class="row" style="margin-top: 1em">
                 <div class="col-md-12 ">
                     <div class="header"><h1>Projeto CRUD Bichinhos</h1></div>
